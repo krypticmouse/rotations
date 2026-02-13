@@ -167,7 +167,15 @@ export default function MoveDisplay() {
     <div className="flex flex-col items-center min-h-screen px-4 py-8 gap-6 bg-gradient-to-b from-[hsl(0,0%,95%)] to-[hsl(0,0%,85%)]">
       {/* Header */}
       <h1 className="font-mono text-sm uppercase tracking-[0.3em] text-[hsl(220,10%,40%)]">
-        Cube Trainer — Rotations
+        Rotations by{" "}
+        <a
+          href="https://www.herumbshandilya.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-[hsl(220,10%,25%)] transition-colors"
+        >
+          Herumb Shandilya
+        </a>
       </h1>
 
       {/* 3D Cube + Move display */}
