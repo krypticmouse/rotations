@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 40 10% 92%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 40 10% 92%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 40 10% 92%;
+
+    --primary: 25 95% 55%;
+    --primary-foreground: 220 20% 6%;
+
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 40 10% 85%;
+
+    --muted: 220 15% 14%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 25 95% 55%;
+    --accent-foreground: 220 20% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 25 95% 55%;
+
+    --radius: 0.75rem;
+
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', sans-serif;
+
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 40 10% 92%;
+    --sidebar-primary: 25 95% 55%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 14%;
+    --sidebar-accent-foreground: 40 10% 92%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 25 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@keyframes color-fade {
+  0% {
+    color: transparent;
+  }
+  15% {
+    color: hsl(220, 20%, 15%);
+  }
+  85% {
+    color: hsl(220, 20%, 15%);
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+.animate-color-fade {
+  animation: color-fade var(--fade-duration, 1s) ease-in-out forwards;
+}
